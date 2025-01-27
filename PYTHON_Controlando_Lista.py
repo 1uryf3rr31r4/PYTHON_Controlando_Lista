@@ -31,6 +31,9 @@ def imprimir_lista(lista):
     for item in lista:
         print(item)
 
+def esvaziar_lista(lista):
+    lista.clear()
+
 def opcao():
     print('1 - Inserir elemento no inicio da lista')
     print('2 - Inserir elemento no final da lista')
@@ -55,6 +58,8 @@ def menu():
             print(f'Tamanho da lista: {tamanho_lista(lista)}')
         elif escolha==5:
             imprimir_lista(lista)
+        elif escolha==6:
+            esvaziar_lista(lista)
 
 if __name__=='__main__':
     menu()
