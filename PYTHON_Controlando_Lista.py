@@ -8,6 +8,13 @@ def adicionar_inicio(lista):
             lista.insert(0, item)
             print(lista)
 
+def adicionar_fim(lista):
+    item=''
+    while item.lower()!='s':
+        item=input("Insira o elemento ou digite 's' para finalizar: ")
+        if item!='s':
+            lista.append(item)
+            print(lista)
 
 def opcao():
     print('1 - Inserir elemento no inicio da lista')
@@ -25,7 +32,8 @@ def menu():
         escolha=int(input('>> '))
         if escolha==1:
             adicionar_inicio(lista)
-
+        elif escolha==2:
+            adicionar_fim(lista)
 
 if __name__=='__main__':
     menu()
