@@ -24,6 +24,8 @@ def remover_elemento(lista):
             return f'O elemento {item} foi removido.'
     return 'Este elemento não pertence a lista'
 
+def tamanho_lista(lista):
+    return len(lista)
 
 def opcao():
     print('1 - Inserir elemento no inicio da lista')
@@ -44,7 +46,9 @@ def menu():
         elif escolha==2:
             adicionar_fim(lista)
         elif escolha==3:
-            remover_elemento(lista)
+            print(remover_elemento(lista))
+        elif escolha==4:
+            print(f'Tamanho da lista: {tamanho_lista(lista)}')
 
 if __name__=='__main__':
     menu()
