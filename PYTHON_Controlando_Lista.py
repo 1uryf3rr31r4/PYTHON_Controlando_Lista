@@ -16,6 +16,15 @@ def adicionar_fim(lista):
             lista.append(item)
             print(lista)
 
+def remover_elemento(lista):
+    item=input('Digite o item a ser removido: ')
+    for value in lista:
+        if value==item:
+            lista.remove(item)
+            return f'O elemento {item} foi removido.'
+    return 'Este elemento não pertence a lista'
+
+
 def opcao():
     print('1 - Inserir elemento no inicio da lista')
     print('2 - Inserir elemento no final da lista')
@@ -34,6 +43,8 @@ def menu():
             adicionar_inicio(lista)
         elif escolha==2:
             adicionar_fim(lista)
+        elif escolha==3:
+            remover_elemento(lista)
 
 if __name__=='__main__':
     menu()
